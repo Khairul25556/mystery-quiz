@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('assets/ecodelia.png') no-repeat center;
+    background-color:black;
+}
+
+#startScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#startButton {
+    background: red;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: btn 1s infinite alternate;
+}
+
+@keyframes btn{
+    0%{
+        background-color: none;
+    }
+
+    50%{
+        background-color: red;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+
+#startButton:hover {
+    background: darkred;
+}
+
+#startScreen.fadeOut {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
