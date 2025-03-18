@@ -1,3 +1,11 @@
+function playAudio() {
+    const audio = document.getElementById('backgroundAudio');
+    audio.play();
+}
+
+document.body.addEventListener('click', function() {
+    playAudio();
+});
 
 const input = document.getElementById('input');
 const output = document.getElementById('output');
