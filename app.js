@@ -1,10 +1,18 @@
 
-     document.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            document.getElementById("startScreen").classList.add("fadeOut");
+function goToQuiz() {
+    document.getElementById("startScreen").classList.add("fadeOut");
 
-            setTimeout(function() {
-                window.location.href = "quiz-index.html";  
-            }, 500);
-        }
-    });
+    setTimeout(function() {
+        window.location.href = "quiz-index.html";  
+    }, 500);
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        goToQuiz();
+    }
+});
+
+document.getElementById("startScreen").addEventListener("click", function() {
+    goToQuiz();
+});
